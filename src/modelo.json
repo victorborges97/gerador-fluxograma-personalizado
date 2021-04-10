@@ -1,0 +1,328 @@
+{
+	"curso": "Educação Física",
+	"tipo": "Bacharel",
+	"anoletivo": "2021/1",
+	"atividadeComplementarAt": 0,
+	"atividadeComplementarAp": 0,
+	"atividadeComplementarCredito": 0,
+	"periodos": [
+		{
+			"periodo": "1º Período",
+			"disciplinas": [
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				}
+			]
+		},
+		{
+			"periodo": "2º Período",
+			"disciplinas": [
+				{
+					"nome": "Anatomia I",
+					"creditos": 4,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 60,
+					"cargaHorariaPratica": 20
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 4,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 60,
+					"cargaHorariaPratica": 20
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 4,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 60,
+					"cargaHorariaPratica": 20
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 4,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 60,
+					"cargaHorariaPratica": 20
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 4,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 60,
+					"cargaHorariaPratica": 20
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 4,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 60,
+					"cargaHorariaPratica": 20
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 4,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 60,
+					"cargaHorariaPratica": 20
+				}
+			]
+		},
+		{
+			"periodo": "3º Período",
+			"disciplinas": [
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				}
+			]
+		},
+		{
+			"periodo": "4º Período",
+			"disciplinas": [
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				}
+			]
+		},
+		{
+			"periodo": "5º Período",
+			"disciplinas": [
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				}
+			]
+		},
+		{
+			"periodo": "6º Período",
+			"disciplinas": [
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				}
+			]
+		},
+		{
+			"periodo": "7º Período",
+			"disciplinas": [
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				}
+			]
+		},
+		{
+			"periodo": "8º Período"
+		}
+	]
+}

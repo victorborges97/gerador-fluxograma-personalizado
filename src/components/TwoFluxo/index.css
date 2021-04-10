@@ -1,0 +1,16 @@
+
+
+.form__div {
+    display: flex;
+    flex-direction: column;
+}
+
+.icon_add__twofluxo {
+    margin-right: 15px;
+    cursor: pointer;
+}
+
+.icon_expand__twofluxo {
+    margin-right: 5px;
+    cursor: pointer;
+}
