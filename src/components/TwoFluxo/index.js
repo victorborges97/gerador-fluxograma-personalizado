@@ -3,13 +3,13 @@ import { useContextApi } from '../../context/ContextApi';
 
 import Container from '@material-ui/core/Container';
 import { Button, FormControl, InputLabel, MenuItem, Select, TextField, List, ListSubheader, Collapse, ListItem, ListItemText, ListItemIcon, ButtonGroup } from '@material-ui/core';
-import ExpandLess from '@material-ui/icons/ExpandLess';
-import ExpandMore from '@material-ui/icons/ExpandMore';
+import { ArrowBackIos, ArrowForwardIos } from '@material-ui/icons';
 import { BiMessageSquareAdd } from 'react-icons/bi';
 
 // Icon BiMessageSquareAdd
 
 import "./index.css"
+import FormikArray from '../Formik';
 
 const initialDisciplina = {
     "nome": "",
@@ -26,6 +26,7 @@ const TwoFluxo = (props) => {
 
     const [perioodosItem, setPeriodosItem] = useState([]);
     const [openJson, setOpenJson] = useState({});
+    const [numberIdx, setNumberIdx] = useState(0);
 
     useEffect(() => {
         for(var i=0; i < Data.quantidadePeriodo; i++) {
@@ -55,66 +56,102 @@ const TwoFluxo = (props) => {
         console.log("DEPOIS: ",perioodosItem)
     };
 
-    const handleInputDisciplinas = (idxPeriodos, idxDisc, periodo) => (e) => {
+    const handleInputDisciplinas = (idxDisc, id) => (e) => {
         const { name, value } = e.target
         
-        let periodoSelecionado = perioodosItem[idxPeriodos]
+        console.log(`
+        ID: ${id}
+        INDEX_DISCIPLINA: ${idxDisc}
+        `)
 
-        let disciplinaSelecionada = periodoSelecionado.disciplinas[idxDisc]
-        disciplinaSelecionada[name] = value
- 
-        console.log(disciplinaSelecionada)
+        const novo = perioodosItem;
+
+        novo.forEach(disc => {
+            if(disc.id.toString() === id.toString()){
+                disc.disciplinas[idxDisc][name] = value;
+            }
+        })
+
+        console.log(novo)
+
+        // setPeriodosItem([
+        //     ...perioodosItem,
+        //     [numberIdx] = periodoSelecionado
+        // ])
     }   
 
-    const DisciplinasInput = (disciplinas, idxPeriodos, periodo) => {
+    const DisciplinasInput = ({item, idx, id}) => {
         return (
-            disciplinas.map((item, idx) => (
-                <div key={idx} >
-                    <TextField
-                    label="Nome disciplina"
-                    name="nome"
-                    onChange={handleInputDisciplinas(idxPeriodos, idx, periodo)}
-                    value={item.nome}
-                    />
-                    <br />
-                    <TextField
-                    label="Créditos"
-                    name="creditos"
-                    onChange={handleInputDisciplinas(idxPeriodos, idx, periodo)}
-                    value={item.creditos}
-                    />
-                    <br />
-                    <TextField
-                    label="Códido da disciplina"
-                    name="codigo"
-                    onChange={handleInputDisciplinas(idxPeriodos, idx, periodo)}
-                    value={item.codigo}
-                    />
-                    <br />
-                    <TextField
-                    label="CH - T"
-                    name="cargaHorariaTeorica"
-                    onChange={handleInputDisciplinas(idxPeriodos, idx, periodo)}
-                    value={item.cargaHorariaTeorica}
-                    />
-                    <br />
-                    <TextField
-                    label="CH - P"
-                    name="cargaHorariaPratica"
-                    onChange={handleInputDisciplinas(idxPeriodos, idx, periodo)}
-                    value={item.cargaHorariaPratica}
-                    />
-                    <br />
-                </div>
-            ))
-        )
+            <div>
+                <TextField
+                label="Nome disciplina"
+                name="nome"
+                onChange={handleInputDisciplinas(idx, id)}
+                value={item.nome}
+                />
+                <br />
+                <TextField
+                label="Créditos"
+                name="creditos"
+                // onChange={handleInputDisciplinas(idxPeriodos, idx, periodo)}
+                value={item.creditos}
+                />
+                <br />
+                <TextField
+                label="Códido da disciplina"
+                name="codigo"
+                // onChange={handleInputDisciplinas(idxPeriodos, idx, periodo)}
+                value={item.codigo}
+                />
+                <br />
+                <TextField
+                label="CH - T"
+                name="cargaHorariaTeorica"
+                // onChange={handleInputDisciplinas(idxPeriodos, idx, periodo)}
+                value={item.cargaHorariaTeorica}
+                />
+                <br />
+                <TextField
+                label="CH - P"
+                name="cargaHorariaPratica"
+                // onChange={handleInputDisciplinas(idxPeriodos, idx, periodo)}
+                value={item.cargaHorariaPratica}
+                />
+                <br />
+            </div>
+        )   
     }
+
+    const handleNextQuestion = () => {
+        if(numberIdx+1 < totalIndex){
+            setNumberIdx(numberIdx + 1);
+        }
+    }
+    
+    const handlePrevQuestion = () => {
+        if(numberIdx > 0){
+            setNumberIdx(numberIdx - 1);
+        }
+    }
+
+    const totalIndex = perioodosItem ? perioodosItem.length : 0;
 
     return (
         <Container maxWidth="xl">
             <h3 className="titulo">Adicione as disciplinas dos períodos</h3>
 
-            <div className="form__div">
+            <FormikArray InitialValue={perioodosItem} />
+
+            
+        </Container>
+    )
+}
+
+export default TwoFluxo;
+
+/**
+ * 
+ * <div className="form__div">
 
                 <List
                     component="nav"
@@ -126,24 +163,43 @@ const TwoFluxo = (props) => {
                     }
                 >
                     {
-                        perioodosItem &&
-                        perioodosItem.map((perio, idx) => (
-                            <>
-                                <ListItem >
-                                    <ListItemText primary={perio.periodo} />
-                                    <BiMessageSquareAdd className="icon_add__twofluxo" onClick={() => { handleClickAdd(idx) }} />
-                                    {open ? <ExpandLess className="icon_expand__twofluxo" onClick={() => { handleClick(idx) }} /> : <ExpandMore className="icon_expand__twofluxo" onClick={() => { handleClick(idx) }} />}
+                        totalIndex > 0 && (
+                        <>
+                            <ListItem component="div" alignItems="center" >
+                                
+                                <ArrowBackIos 
+                                    className="icon_expand__twofluxo" 
+                                    onClick={handlePrevQuestion} 
+                                />
+                                
+                                <ListItem component="div" alignItems="center" >
+                                    <span>{perioodosItem[numberIdx].periodo}</span>
+                                    <BiMessageSquareAdd 
+                                        className="icon_add__twofluxo" 
+                                        onClick={() => { alert("Adicionando uma disciplina") }} 
+                                    />
                                 </ListItem>
-                                <Collapse in={openJson[`PERIODO${idx+1}`]} timeout="auto" unmountOnExit>
-                                    <List component="div" disablePadding>
-                                        {
-                                            perio.disciplinas && 
-                                            DisciplinasInput(perio.disciplinas, idx, perio.periodo)
-                                        }
-                                    </List>
-                                </Collapse>
-                            </>
-                        ))
+                                
+                                <ArrowForwardIos 
+                                    className="icon_expand__twofluxo" 
+                                    onClick={handleNextQuestion} 
+                                />
+                                
+                            </ListItem>
+                            <Collapse in={true} timeout="auto" unmountOnExit>
+                                <List component="div" disablePadding>
+                                    {
+                                        perioodosItem[numberIdx].disciplinas && 
+                                        perioodosItem[numberIdx].disciplinas.map((item, idx) => {
+                                            return (
+                                                <DisciplinasInput item={item} idx={idx} id={perioodosItem[numberIdx].id} />
+                                            )
+                                        })
+                                    }
+                                </List>
+                            </Collapse>
+                        </>
+                        )
                     }
                 </List>       
 
@@ -157,8 +213,5 @@ const TwoFluxo = (props) => {
                 </ButtonGroup>
                             
             </div>
-        </Container>
-    )
-}
-
-export default TwoFluxo;
+ * 
+ */

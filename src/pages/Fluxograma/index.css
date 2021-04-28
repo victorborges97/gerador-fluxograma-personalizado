@@ -1,15 +1,20 @@
 #fluxograma {
-  zoom: 0.25;
+  /* zoom: 0.25; */
   color: var(--texto-color);
 }
 
-.App {
+.page_fluxo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.page_a4 {
   background-color: var(--bg-color);
   border: 1px solid var(--border-color);
-  min-height: 100vh;
+  height: 100vh;
   display: flex;
   flex-direction: column;
-  /*transform: scale(0.9);*/
 }
 
 .App_header {
@@ -27,8 +32,10 @@
 
 .conteudo__fluxo {
   margin-bottom: 3%;
+  position: relative;
   display: flex;
   flex-direction: column;
+  height: 100%;
 }
 
 .fluxo {
@@ -40,8 +47,11 @@
 }
 
 .somatorias {
-  margin-right: 3%;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
   display: flex;
+  margin-right: 3%;
   flex-direction: row;
   justify-content: flex-end;
   flex-wrap: wrap;
@@ -59,7 +69,6 @@
 :nth-child(2n+1) > assim pula uma linha
 
 */
-
 
 /*PEGAR ULTIMO ELEMENTO*/
 .periodo__container_disciplinas:last-child {
@@ -166,4 +175,12 @@ td.style1, td.style2 {
   padding: 0.2rem 1rem;  
   font-size: calc(10px + 1vmin);
   color: var(--texto-color);
+}
+
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
 }
