@@ -137,81 +137,14 @@ const TwoFluxo = (props) => {
     const totalIndex = perioodosItem ? perioodosItem.length : 0;
 
     return (
-        <Container maxWidth="xl">
-            <h3 className="titulo">Adicione as disciplinas dos períodos</h3>
+        <Container maxWidth="md">
+            <div className="container">
+                <h3 className="titulo">Adicione as disciplinas dos períodos</h3>
 
-            <FormikArray InitialValue={perioodosItem} />
-
-            
+                <FormikArray InitialValue={perioodosItem} />
+            </div>
         </Container>
     )
 }
 
 export default TwoFluxo;
-
-/**
- * 
- * <div className="form__div">
-
-                <List
-                    component="nav"
-                    aria-labelledby="nested-list-subheader"
-                    subheader={
-                        <ListSubheader component="div" id="nested-list-subheader">
-                            Períodos selecionados
-                        </ListSubheader>
-                    }
-                >
-                    {
-                        totalIndex > 0 && (
-                        <>
-                            <ListItem component="div" alignItems="center" >
-                                
-                                <ArrowBackIos 
-                                    className="icon_expand__twofluxo" 
-                                    onClick={handlePrevQuestion} 
-                                />
-                                
-                                <ListItem component="div" alignItems="center" >
-                                    <span>{perioodosItem[numberIdx].periodo}</span>
-                                    <BiMessageSquareAdd 
-                                        className="icon_add__twofluxo" 
-                                        onClick={() => { alert("Adicionando uma disciplina") }} 
-                                    />
-                                </ListItem>
-                                
-                                <ArrowForwardIos 
-                                    className="icon_expand__twofluxo" 
-                                    onClick={handleNextQuestion} 
-                                />
-                                
-                            </ListItem>
-                            <Collapse in={true} timeout="auto" unmountOnExit>
-                                <List component="div" disablePadding>
-                                    {
-                                        perioodosItem[numberIdx].disciplinas && 
-                                        perioodosItem[numberIdx].disciplinas.map((item, idx) => {
-                                            return (
-                                                <DisciplinasInput item={item} idx={idx} id={perioodosItem[numberIdx].id} />
-                                            )
-                                        })
-                                    }
-                                </List>
-                            </Collapse>
-                        </>
-                        )
-                    }
-                </List>       
-
-                <ButtonGroup disableElevation variant="contained" color="primary">
-                    <Button variant="contained" color="primary" onClick={prevStep}>
-                        Voltar
-                    </Button>
-                    <Button variant="contained" color="primary" onClick={nextStep}>
-                        Avançar
-                    </Button>
-                </ButtonGroup>
-                            
-            </div>
- * 
- */

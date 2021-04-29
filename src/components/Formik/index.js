@@ -47,7 +47,7 @@ const FormikArray = () => {
             nextStep()
         }}
         >
-            <Form>
+            <Form className="container_form">
                 <FieldArray name={`periodos[${numberIdx}]disciplinas`}>
                     {({ handleChange, handleBlur, handleSubmit, form, ...fieldArrayHelpers }) => {
 
@@ -66,24 +66,35 @@ const FormikArray = () => {
                                     component="nav"
                                     aria-labelledby="nested-list-subheader"
                                     subheader={
-                                        <ListSubheader component="div" id="nested-list-subheader">
-                                            Períodos selecionados
+                                        <ListSubheader 
+                                            className="center_subheader"
+                                            component="div" 
+                                            id="nested-list-subheader"
+                                        >
+                                            <p>
+                                                Períodos selecionados
+                                            </p>
                                         </ListSubheader>
                                     }
                                 >
-                                    <ListItem component="div" alignItems="center" >
+                                    <ListItem 
+                                        component="div" 
+                                        alignItems="center" 
+                                    >
                                                     
                                         <ArrowBackIos 
                                             className="icon_expand__twofluxo" 
                                             onClick={handlePrevQuestion} 
                                         />
                                         
-                                        <ListItem component="div" alignItems="center" >
-                                            <span>{form.values.periodos[numberIdx].periodo}</span>
-                                            <BiMessageSquareAdd 
-                                                className="icon_add__twofluxo" 
-                                                onClick={onAddClick}
-                                            />
+                                        <ListItem className="center_subheader" component="div" alignItems="center"  >
+                                            <p className="center_periodo_icon">
+                                                <span>{form.values.periodos[numberIdx].periodo}</span>
+                                                <BiMessageSquareAdd 
+                                                    className="icon_add__twofluxo" 
+                                                    onClick={onAddClick}
+                                                />
+                                            </p>
                                         </ListItem>
                                         
                                         <ArrowForwardIos
@@ -150,7 +161,11 @@ const FormikArray = () => {
                                 </List>       
     
                                 
-                                <ButtonGroup disableElevation variant="contained" color="primary">
+                                <ButtonGroup 
+                                    className="group_button"
+                                    disableElevation 
+                                    variant="contained" 
+                                    color="primary">
                                     <Button variant="contained" color="primary" onClick={prevStep}>
                                         Voltar
                                     </Button>
