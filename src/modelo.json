@@ -5,6 +5,7 @@
 	"atividadeComplementarAt": 0,
 	"atividadeComplementarAp": 0,
 	"atividadeComplementarCredito": 0,
+	"quantidadePeriodo": 8,
 	"periodos": [
 		{
 			"periodo": "1º Período",
@@ -322,7 +323,44 @@
 			]
 		},
 		{
-			"periodo": "8º Período"
+			"periodo": "8º Período",
+			"disciplinas": [
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				},
+				{
+					"nome": "Anatomia I",
+					"creditos": 2,
+					"codigo": "EADANAI",
+					"cargaHorariaTeorica": 30,
+					"cargaHorariaPratica": 10
+				}
+			]
 		}
 	]
 }

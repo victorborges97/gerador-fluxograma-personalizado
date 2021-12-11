@@ -9,31 +9,31 @@ const UserForm = () => {
   const { step } = useContextApi();
 
   function Passos() {
-      switch (step) {
-        case 1:
-          return (
-            <NewFluxo />
-          )
-  
-        case 2:
-          return (
-            <TwoFluxo />
-          )
-  
-        case 3:
-          return (
-            <Fluxograma />
-          )
-      
-        default:
-          break;
-      }
+    switch (step) {
+      case 1:
+        return (
+          <NewFluxo />
+        )
+
+      case 2:
+        return (
+          <TwoFluxo />
+        )
+
+      case 3:
+        return (
+          <Fluxograma />
+        )
+
+      default:
+        break;
     }
+  }
 
 
-  
+
   return (
-    <div>
+    <div style={{ height: '100vh', width: '100vw' }}>
       {Passos()}
     </div>
   )

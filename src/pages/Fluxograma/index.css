@@ -1,18 +1,14 @@
 #fluxograma {
-  /* zoom: 0.25; */
+  /* zoom: 0.4; */
+  /* transform: scale(0.4); */
   color: var(--texto-color);
-}
-
-.page_fluxo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .page_a4 {
   background-color: var(--bg-color);
   border: 1px solid var(--border-color);
   height: 100vh;
+  width: 100vw;
   display: flex;
   flex-direction: column;
 }
@@ -25,7 +21,7 @@
   /* font-size: calc(10px + 2vmin); */
 }
 
-.App_header_titulo{
+.App_header_titulo {
   font-size: calc(20px + 1vmin);
   font-weight: bold;
 }
@@ -80,7 +76,7 @@
 }
 
 /*PEGAR PENULTIMO ELEMENTO*/
-.periodo__container_disciplinas:nth-last-child(-n+2){
+.periodo__container_disciplinas:nth-last-child(-n + 2) {
   margin-bottom: 70px;
 }
 
@@ -119,7 +115,7 @@
   display: inline-block;
   text-align: center;
   padding: 0.1rem 0.2rem;
-  flex: 1
+  flex: 1;
 }
 .cred_codigo__codigo {
   text-align: center;
@@ -145,42 +141,50 @@
   border-top: 1px solid var(--border-color);
 }
 
-table { 
+table {
   margin-top: 20px;
-  border-collapse:collapse; 
-  page-break-after:always 
+  border-collapse: collapse;
+  page-break-after: always;
 }
 
-.gridlines td { 
-  border:1px dotted var(--border-color) 
+.gridlines td {
+  border: 1px dotted var(--border-color);
 }
 
-.gridlines th { 
-  border:1px dotted var(--border-color)  
+.gridlines th {
+  border: 1px dotted var(--border-color);
 }
 
-.b { text-align:center }
+.b {
+  text-align: center;
+}
 
-.s { 
-  text-align:left;
+.s {
+  text-align: left;
   padding-right: 1rem;
 }
 
-td.style1, td.style2 {
+td.style1,
+td.style2 {
   vertical-align: middle;
-  border-bottom:1px solid var(--border-color) !important;
-  border-top:1px solid var(--border-color) !important;
-  border-left:1px solid var(--border-color) !important;
-  border-right:1px solid var(--border-color) !important;
-  padding: 0.2rem 1rem;  
+  border-bottom: 1px solid var(--border-color) !important;
+  border-top: 1px solid var(--border-color) !important;
+  border-left: 1px solid var(--border-color) !important;
+  border-right: 1px solid var(--border-color) !important;
+  padding: 0.2rem 1rem;
   font-size: calc(10px + 1vmin);
   color: var(--texto-color);
 }
 
-@media print
-{    
-    .no-print, .no-print *
-    {
-        display: none !important;
-    }
+@media print {
+  .page_a4 {
+    transform: scale(0.7);
+  }
+  table {
+    page-break-inside: avoid;
+  }
+  .no-print,
+  .no-print * {
+    display: none !important;
+  }
 }

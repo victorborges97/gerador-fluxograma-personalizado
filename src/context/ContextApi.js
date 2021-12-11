@@ -1,9 +1,10 @@
 import React, { createContext, useState, useContext } from "react";
+import modelo from "../modelo.json";
 
 const ApiContext = createContext();
 
 export default function ContextApi({ children }) {
-  const [Data, setData] = useState({
+  const INITIAL_DISCIPLINA = modelo != null ? modelo : {
     "curso": "",
     "tipo": "", /*Bacharel ou Licenciatura*/
     "anoletivo": "", /** 2021/1 */
@@ -12,18 +13,21 @@ export default function ContextApi({ children }) {
     "atividadeComplementarCredito": 0,
     "quantidadePeriodo": 0,
     "periodos": []
-  });
+  };
+
+  const [Data, setData] = useState(INITIAL_DISCIPLINA);
   const [step, setStep] = useState(1);
 
-  const initialDisciplina = {
-    "nome": "",
-    "creditos": 0,
-    "codigo": "",
-    "cargaHorariaTeorica": 0,
-    "cargaHorariaPratica": 0
-  };
-  const initialPeriodo = (n) => { 
-    let retornP = {"id": `${n}`,"periodo": `${n}º Período`, "disciplinas": [initialDisciplina]} 
+  // const initialDisciplina = {
+  //   "nome": "",
+  //   "creditos": 0,
+  //   "codigo": "",
+  //   "cargaHorariaTeorica": 0,
+  //   "cargaHorariaPratica": 0
+  // };
+  const initialDisciplina = modelo;
+  const initialPeriodo = (n) => {
+    let retornP = { "id": `${n}`, "periodo": `${n}º Período`, "disciplinas": [initialDisciplina] }
     return retornP;
   };
 
@@ -31,7 +35,7 @@ export default function ContextApi({ children }) {
     const { name, value } = e.target
     setData({
       ...Data,
-      [name] : value
+      [name]: value
     });
   }
 
@@ -39,37 +43,37 @@ export default function ContextApi({ children }) {
     const { name, value } = e.target
     let periodosPreenchidos = []
 
-    if(value) {
-      for(var i = 0; i < value; i++){
-        periodosPreenchidos.push(initialPeriodo(i+1));
+    if (value) {
+      for (var i = 0; i < value; i++) {
+        periodosPreenchidos.push(initialPeriodo(i + 1));
       }
     }
 
     setData({
       ...Data,
-      [name] : value,
+      [name]: value,
       periodos: periodosPreenchidos,
     })
   }
 
   const nextStep = () => {
-    setStep(prevState => prevState+1)
+    setStep(prevState => prevState + 1)
   }
 
   const prevStep = () => {
-    setStep(prevState => prevState-1)
+    setStep(prevState => prevState - 1)
   }
 
   return (
     <ApiContext.Provider value={{
-        Data,
-        setData,
-        initialPeriodo,
-        handleChange,
-        nextStep,
-        prevStep,
-        step,
-        handleChangePeriodos
+      Data,
+      setData,
+      initialPeriodo,
+      handleChange,
+      nextStep,
+      prevStep,
+      step,
+      handleChangePeriodos
     }}>
       {children}
     </ApiContext.Provider>
